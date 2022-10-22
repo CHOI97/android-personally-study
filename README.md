@@ -37,8 +37,4 @@ data class User(
 
 [보일러 플레이트](https://www.notion.so/0863d1492a864dfca2e384b7021c6833) 
 
-# 참고자료
 
----
-
-[](https://kotlinlang.org/docs/data-classes.html#properties-declared-in-the-class-body)
