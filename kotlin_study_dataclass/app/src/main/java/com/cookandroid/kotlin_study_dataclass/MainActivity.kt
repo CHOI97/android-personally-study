@@ -22,5 +22,10 @@ class MainActivity : AppCompatActivity() {
         viewBinding.userId.text = user.user_id
         viewBinding.userData.text = user.user_data
         Log.d("User라는 객체에 메소드",user.helloUser(user.user_name))
+
+        //dataclass copy
+        val second_user = user.copy(user_id="0000")
+        Log.d("copy after dataclass",user.toString())
+        Log.d("copy after dataclass copy",second_user.toString())
     }
 }
