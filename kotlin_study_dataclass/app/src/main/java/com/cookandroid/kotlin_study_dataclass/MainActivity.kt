@@ -12,11 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-        user = User("60162188","최정현","컴퓨터공학과")
+
+        //dataclass 생성자
+        user = User("26세 남자","최정현","컴퓨터공학과")
+
+
+        //User라는 객체에 멤버
         viewBinding.userName.text = user.user_name
-        var x = viewBinding.userName.text
-        Log.d("text", x.toString())
         viewBinding.userId.text = user.user_id
         viewBinding.userData.text = user.user_data
+        Log.d("User라는 객체에 메소드",user.helloUser(user.user_name))
     }
 }
