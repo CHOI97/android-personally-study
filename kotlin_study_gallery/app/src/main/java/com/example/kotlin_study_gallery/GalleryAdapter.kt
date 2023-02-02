@@ -1,6 +1,7 @@
 package com.example.kotlin_study_gallery
 
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -18,8 +19,9 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder>() 
 
     inner class GalleryViewHolder(private val binding: ItemGalleryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind() {
-            val item = imageList[absoluteAdapterPosition]
+        fun bind(position: Int) {
+            Log.d("Binding Gallery","이미지 가져옴")
+            val item = imageList[position]
             Glide.with(itemView)
                 .load(item)
                 .into(binding.imageView)
@@ -32,7 +34,7 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: GalleryViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(position)
     }
 
     override fun getItemCount(): Int = imageList.size
