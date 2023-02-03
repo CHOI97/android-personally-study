@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        requestPermission()
+
         init()
     }
 //    fun init(){
@@ -119,65 +119,19 @@ class MainActivity : AppCompatActivity() {
                 // 갤러리 접근 권한이 없는 경우 && 교육용 팝업을 보여줘야 하는 경우
                 shouldShowRequestPermissionRationale(android.Manifest.permission.READ_MEDIA_IMAGES)
                 -> {
-//                    showPermissionContextPopup()
+                    requestPermission()
                     Log.d("LOG","갤러리 접근 권한이 없는 경우 && 교육용 팝업을 보여줘야 하는 경우")
                 }
 
                 // 권한 요청 하기
                 else -> {
+                    requestPermission()
 
                 }
             }
         }
 
     }
-//    private fun CheckPermssion(){
-//        if (checkSelfPermission(READ_EXTERNAL_STORAGE)
-//            == PackageManager.PERMISSION_GRANTED) {
-//            Log.d("있네?","있대요")
-//
-//        } else {
-//            Log.d("checkSelfPermission(READ_EXTERNAL_STORAGE)",checkSelfPermission(READ_EXTERNAL_STORAGE).toString())
-//            Log.d("PackageManager.PERMISSION_GRANTED",PackageManager.PERMISSION_GRANTED.toString())
-//            Log.d("없네,,?","없대요")
-//            requestPermission.launch(READ_EXTERNAL_STORAGE)
-//        }
-//    }
-//    companion object {
-//        const val PERMISSION_REQUEST_CODE = 1001
-//    }
-
-
-//    private fun showDialogToGetPermission() {
-//        val builder = AlertDialog.Builder(this)
-//        builder.setTitle("Permisisons request")
-//            .setMessage("We need the location permission for some reason. " +
-//                    "You need to move on Settings to grant some permissions")
-//
-//        builder.setPositiveButton("OK") { dialogInterface, i ->
-//            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-//                Uri.fromParts("package", packageName, null))
-//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            startActivity(intent)   // 6
-//        }
-//        builder.setNegativeButton("Later") { dialogInterface, i ->
-//            // ignore
-//        }
-//        val dialog = builder.create()
-//        dialog.show()
-//    }
-//    private fun requestPermission() {
-//        val locationResultLauncher = registerForActivityResult(
-//            ActivityResultContracts.RequestPermission()
-//        ) {
-//            if (!it) {
-//                Toast.makeText(this, "스토리지에 접근 권한을 허가해주세요", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//        locationResultLauncher.launch(
-//            android.Manifest.permission.READ_EXTERNAL_STORAGE
-//        )
-//    }
 
 
     private fun getCursor(): Cursor? {
