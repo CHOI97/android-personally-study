@@ -11,3 +11,7 @@
 - API
 
 - Component custom
+
+- gallery media store
+
+- permission
