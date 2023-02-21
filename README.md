@@ -15,3 +15,5 @@
 - gallery media store
 
 - permission
+
+- sharedpreference
