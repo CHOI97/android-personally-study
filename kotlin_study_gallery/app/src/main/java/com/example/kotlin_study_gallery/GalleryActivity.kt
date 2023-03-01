@@ -126,7 +126,7 @@ class GalleryActivity : AppCompatActivity() {
         val projection = arrayOf(
             MediaStore.Images.ImageColumns._ID,
             MediaStore.Images.ImageColumns.TITLE,
-            MediaStore.Images.ImageColumns.DATE_TAKEN
+            MediaStore.Images.ImageColumns.DATE_TAKEN,
         )
         val selection = null
         val selectionArgs = null
