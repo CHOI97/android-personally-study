@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        /* lifecycleScope Thread 를 구분 Main(UI Thread) , Dispatcher Thread
         lifecycleScope.launch(Dispatchers.IO){
             delay(3000)
             Log.d(TAG, "coroutine 1 : ${Thread.currentThread().name}") // main 이 아닌 thread (DefaultDispatcher-worker-3)
@@ -25,7 +26,13 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "coroutine 2 : ${Thread.currentThread().name}") // UI 변경을 위한 비동기 처리 (main Thread)
             }
         }
-
-        Log.d(TAG, "onCreate: ${Thread.currentThread().name}") // main Thread
+        */
+        lifecycleScope.launch{
+            myFunc()
+        }
+    }
+    suspend fun myFunc(): String{
+        delay(3000) // delay -> suspend 키워드를 꼭 붙여야한다. suspend 는 정지함수
+        return "Hello"
     }
 }
