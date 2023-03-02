@@ -6,10 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
 import com.example.kotlin_study_coroutine.databinding.ActivityMainBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import kotlin.system.measureTimeMillis
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy{
@@ -27,12 +25,34 @@ class MainActivity : AppCompatActivity() {
             }
         }
         */
+        /*
         lifecycleScope.launch{
             myFunc()
         }
+        */
+        lifecycleScope.launch(Dispatchers.IO){
+            val time = measureTimeMillis {
+                val result1 = async{network1()}
+                val result2 = async{network2()}
+                Log.d(TAG,"결과1: ${result1.await()}")
+                Log.d(TAG,"결과2: ${result2.await()}")
+            }
+            Log.d(TAG,"시간 : $time")
+        }
+
     }
+    suspend fun network1(): String{
+        delay(2000) // delay -> suspend 키워드를 꼭 붙여야한다. suspend 는 정지함수
+        return "result network1"
+    }
+    suspend fun network2(): String{
+        delay(3000) // delay -> suspend 키워드를 꼭 붙여야한다. suspend 는 정지함수
+        return "result network2"
+    }
+    /*
     suspend fun myFunc(): String{
         delay(3000) // delay -> suspend 키워드를 꼭 붙여야한다. suspend 는 정지함수
         return "Hello"
     }
+    */
 }
