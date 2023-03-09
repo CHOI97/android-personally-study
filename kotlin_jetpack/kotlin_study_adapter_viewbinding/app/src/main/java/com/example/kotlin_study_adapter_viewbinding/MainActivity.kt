@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 // ViewBing DataBinding
 // Recyclerview Adapter findViewById
-//
+
+// DataBinding + ViewModel + LiveData
+// Simple DataBinding Recyclerview
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
