@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 
 // ViewModel
 // 안드로이드의 생명 주기를 관리하기 쉽다.
@@ -21,23 +22,32 @@ import android.widget.TextView
 
 // Rotate 시 View 를 다시 그림
 class MainActivity : AppCompatActivity() {
-    private var countValue = 0
+
+//    private var countValue = 0
+    lateinit var viewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         Log.d("MainActivity","onCreate")
 
         val plusBtn: Button = findViewById<Button>(R.id.plus)
         val minusBtn: Button = findViewById<Button>(R.id.minus)
 
         val resultArea : TextView = findViewById<TextView>(R.id.result)
+        resultArea.text =viewModel.countValue.toString()
         plusBtn.setOnClickListener {
-            countValue++
-            resultArea.text = countValue.toString()
+            viewModel.plus()
+            resultArea.text = viewModel.countValue.toString()
+//            countValue++
+//            resultArea.text = countValue.toString()
         }
         minusBtn.setOnClickListener {
-            countValue--
-            resultArea.text = countValue.toString()
+            viewModel.minus()
+            resultArea.text = viewModel.countValue.toString()
+//            countValue--
+//            resultArea.text = countValue.toString()
         }
     }
 
