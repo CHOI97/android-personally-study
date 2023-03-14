@@ -1,8 +1,9 @@
-package com.example.coin_monitoring
+package com.example.coin_monitoring.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.coin_monitoring.R
 import timber.log.Timber
 
 // Splash 화면 만들기

@@ -14,7 +14,14 @@
         android:theme="@style/Theme.Coin_monitoring"
         tools:targetApi="31">
         <activity
-            android:name=".IntroActivity"
+            android:name=".view.SelectActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.IntroActivity"
             android:exported="true"
             android:theme="@style/Theme.Coin_monitoring.Splash">
             <intent-filter>
@@ -22,6 +29,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

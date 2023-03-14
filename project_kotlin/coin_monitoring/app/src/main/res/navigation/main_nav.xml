@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/introFragment1">
+
+    <fragment
+        android:id="@+id/introFragment1"
+        android:name="com.example.coin_monitoring.view.intro.IntroFragment1"
+        android:label="fragment_intro1"
+        tools:layout="@layout/fragment_intro1" >
+        <action
+            android:id="@+id/action_introFragment1_to_introFragment2"
+            app:destination="@id/introFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment2"
+        android:name="com.example.coin_monitoring.view.intro.IntroFragment2"
+        android:label="fragment_intro2"
+        tools:layout="@layout/fragment_intro2" />
+</navigation>
