@@ -22,7 +22,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.IntroActivity"
+            android:name=".view.intro.IntroActivity"
             android:exported="true"
             android:theme="@style/Theme.Coin_monitoring.Splash">
             <intent-filter>
