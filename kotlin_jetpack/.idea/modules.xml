@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin_study_mutablelivedata.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin_study_mutablelivedata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/kotlin_study_mutablelivedata.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
