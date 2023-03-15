@@ -6,10 +6,28 @@
     tools:context=".BlankFragment1">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="frag1"
-        android:textSize="50sp"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="frag1"
+            android:textSize="50sp"/>
+        <TextView
+            android:id="@+id/text1"
+            android:text="0"
+            android:textSize="60sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn1"
+            android:text="btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
 
 </FrameLayout>
