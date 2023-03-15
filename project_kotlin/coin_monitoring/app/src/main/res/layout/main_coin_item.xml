@@ -14,26 +14,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/coinName"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginLeft="20dp"
-                android:text="coinName"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/coinPriceUpDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="coinPriceUpDown"
-                android:layout_marginLeft="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/coinName"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/coinName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:text="coinName"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
 
             <ImageView
                 android:id="@+id/likeBtn"
@@ -49,9 +53,4 @@
 
     </androidx.cardview.widget.CardView>
 
-
-<<<<<<< HEAD
 </androidx.constraintlayout.widget.ConstraintLayout>
-=======
-</androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> 98ceab8 (코인 모니터링 앱)

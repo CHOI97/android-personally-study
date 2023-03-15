@@ -35,23 +35,20 @@
                 app:layout_constraintStart_toEndOf="@+id/coinName"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/likeBtn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/like_grey"
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="changedPrice"
                 android:layout_marginRight="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
 
-<<<<<<< HEAD
 </androidx.constraintlayout.widget.ConstraintLayout>
-=======
-</androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> 98ceab8 (코인 모니터링 앱)
