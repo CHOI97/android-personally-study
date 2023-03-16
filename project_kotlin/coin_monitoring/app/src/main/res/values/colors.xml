@@ -7,7 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<<<<<<< HEAD
     <color name="red">#FF0000</color>
     <color name="blue">#0096FF</color>
 
+=======
+>>>>>>> 98ceab8 (코인 모니터링 앱)
 </resources>

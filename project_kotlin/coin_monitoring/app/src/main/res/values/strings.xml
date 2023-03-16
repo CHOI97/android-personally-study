@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">coin_monitoring</string>
+<<<<<<< HEAD
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+>>>>>>> 98ceab8 (코인 모니터링 앱)
 </resources>

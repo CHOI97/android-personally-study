@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
     <style name="Theme.Coin_monitoring" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryVariant">@color/red</item>
+=======
+    <style name="Theme.Coin_monitoring" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+>>>>>>> 98ceab8 (코인 모니터링 앱)
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,6 +19,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+<<<<<<< HEAD
         <item name="windowNoTitle">true</item>
     </style>
 
@@ -19,5 +27,7 @@
         <item name="windowSplashScreenBackground">@color/red</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/graph</item>
         <item name="postSplashScreenTheme">@style/Theme.Coin_monitoring</item>
+=======
+>>>>>>> 98ceab8 (코인 모니터링 앱)
     </style>
 </resources>
