@@ -24,5 +24,14 @@ class MainActivity : AppCompatActivity() {
                 Log.d("API1","fail")
             }
         })
+        api.getPostNumber(2).enqueue(object: Callback<Post> {
+            override fun onResponse(call: Call<Post>, response: Response<Post>) {
+                Log.d("API1",response.body().toString())
+            }
+
+            override fun onFailure(call: Call<Post>, t: Throwable) {
+                Log.d("API1","fail")
+            }
+        })
     }
 }
