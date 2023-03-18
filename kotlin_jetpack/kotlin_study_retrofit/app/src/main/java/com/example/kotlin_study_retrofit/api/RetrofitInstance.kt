@@ -1,4 +1,4 @@
-package com.example.kotlin_study_retrofit
+package com.example.kotlin_study_retrofit.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

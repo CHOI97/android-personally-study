@@ -1,4 +1,4 @@
-package com.example.kotlin_study_retrofit
+package com.example.kotlin_study_retrofit.model
 
 data class Post(
     val userId: Int,
