@@ -46,5 +46,6 @@ dependencies {
     implementation ('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4')
 
     // Coroutine ViewModelScope
+    // Coroutine ViewModelScope 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0'은 Duplicate Class error 생김
     implementation ('androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1')
 }

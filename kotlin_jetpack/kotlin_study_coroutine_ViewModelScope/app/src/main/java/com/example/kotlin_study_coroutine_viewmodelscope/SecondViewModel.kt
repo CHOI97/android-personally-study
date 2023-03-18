@@ -12,6 +12,8 @@ import kotlinx.coroutines.launch
 
 class SecondViewModel: ViewModel() {
 
+    // Memory Leak 발생
+    // 실행되면  activity 가 종료되어도 계속해서 실행되고 있음
     fun a(){
         CoroutineScope(Dispatchers.IO).launch {
             for(i in 0..10){
