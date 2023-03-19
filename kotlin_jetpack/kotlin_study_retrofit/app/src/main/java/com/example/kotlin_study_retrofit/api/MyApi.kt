@@ -14,4 +14,7 @@ interface MyApi {
     suspend fun getPostNumber(
         @Path("number") number: Int
     ): Post
+
+    @GET("posts")
+    suspend fun getPostAll() : List<Post>
 }
