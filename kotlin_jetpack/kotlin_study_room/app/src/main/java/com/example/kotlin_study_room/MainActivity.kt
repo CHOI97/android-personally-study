@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import androidx.lifecycle.ViewModelProvider
 import com.example.kotlin_study_room.db.TextDatabase
 import com.example.kotlin_study_room.entity.TextEntity
 import com.example.kotlin_study_room.entity.WordEntity
@@ -17,9 +18,14 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var viewModel : MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel.getData()
+
         val db = TextDatabase.getDatabase(this)
 
         val inputArea = findViewById<EditText>(R.id.textInputArea)
@@ -33,25 +39,30 @@ class MainActivity : AppCompatActivity() {
          Dispatchers.IO 외부 디스크 또는 네트워크 I/O , ROOM 구성요소를 사용
         */
         insertBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch{
-                db.textDao().insert(TextEntity(0,"asdf"))
-                db.wordDao().insert(WordEntity(0,"asdf"))
-                Log.d("MAINACTIVITY",db.textDao().getAllData().toString())
 
-                inputArea.setText("")
-            }
+            viewModel.insertData(inputArea.text.toString())
+            inputArea.setText("")
+//            CoroutineScope(Dispatchers.IO).launch{
+//                db.textDao().insert(TextEntity(0,inputArea.text.toString()))
+//                db.wordDao().insert(WordEntity(0,inputArea.text.toString()))
+//                Log.d("MAINACTIVITY",db.textDao().getAllData().toString())
+//
+//                inputArea.setText("")
+//            }
         }
         getAllBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                Log.d("MAINACTIVITY", db.textDao().getAllData().toString())
-                Log.d("MAINACTIVITY", db.wordDao().getAllData().toString())
-            }
+            viewModel.getData()
+//            CoroutineScope(Dispatchers.IO).launch {
+//                Log.d("MAINACTIVITY", db.textDao().getAllData().toString())
+//                Log.d("MAINACTIVITY", db.wordDao().getAllData().toString())
+//            }
         }
         deleteBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                db.textDao().deleteAllData()
-                db.wordDao().deleteAllData()
-            }
+            viewModel.removeData()
+//            CoroutineScope(Dispatchers.IO).launch {
+//                db.textDao().deleteAllData()
+//                db.wordDao().deleteAllData()
+//            }
         }
     }
 }
