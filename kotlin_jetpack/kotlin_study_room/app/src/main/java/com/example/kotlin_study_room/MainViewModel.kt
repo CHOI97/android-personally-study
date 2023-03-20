@@ -2,9 +2,7 @@ package com.example.kotlin_study_room
 
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.kotlin_study_room.db.TextDatabase
 import com.example.kotlin_study_room.entity.TextEntity
 import com.example.kotlin_study_room.entity.WordEntity
@@ -16,12 +14,23 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     val context = getApplication<Application>().applicationContext
     val db = TextDatabase.getDatabase(context)
 
+
+    // LiveData
+    private var _textList = MutableLiveData<List<TextEntity>>()
+    val textList : LiveData<List<TextEntity>>
+        get() = _textList
+    private var _wordList = MutableLiveData<List<WordEntity>>()
+    val wordList : LiveData<List<WordEntity>>
+        get() = _wordList
+
     // viewModelScope 는 Dispatchers.Main 이기 때문에 Dispatchers.IO 를 사용 할 수 없다.
     // viewModelScope.launch() ->  viewModelScope.launch(Dispatchers.IO)
 
     fun getData() = viewModelScope.launch(Dispatchers.IO) {
         Log.d("MainViewModel",db.textDao().getAllData().toString())
         Log.d("MainViewModel",db.wordDao().getAllData().toString())
+        _textList.postValue(db.textDao().getAllData())
+        _wordList.postValue(db.wordDao().getAllData())
     }
 
     fun insertData(text: String)= viewModelScope.launch(Dispatchers.IO) {

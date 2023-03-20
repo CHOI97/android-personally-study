@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlin_study_room.adapter.CustomAdapter
 import com.example.kotlin_study_room.db.TextDatabase
 import com.example.kotlin_study_room.entity.TextEntity
 import com.example.kotlin_study_room.entity.WordEntity
@@ -50,6 +54,14 @@ class MainActivity : AppCompatActivity() {
 //                inputArea.setText("")
 //            }
         }
+
+        val rv = findViewById<RecyclerView>(R.id.rv)
+
+        viewModel.textList.observe(this, Observer{
+            val customAdapter = CustomAdapter(it)
+            rv.adapter = customAdapter
+            rv.layoutManager = LinearLayoutManager(this)
+        })
         getAllBtn.setOnClickListener {
             viewModel.getData()
 //            CoroutineScope(Dispatchers.IO).launch {
