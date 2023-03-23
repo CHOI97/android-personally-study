@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_test"
+    app:startDestination="@id/blankFragment1">
+
+    <fragment
+        android:id="@+id/blankFragment1"
+        android:name="com.example.kotlin_study_navigation_data_transfer.BlankFragment1"
+        android:label="fragment_blank1"
+        tools:layout="@layout/fragment_blank1" >
+        <action
+            android:id="@+id/action_blankFragment1_to_blankFragment2"
+            app:destination="@id/blankFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment2"
+        android:name="com.example.kotlin_study_navigation_data_transfer.BlankFragment2"
+        android:label="fragment_blank2"
+        tools:layout="@layout/fragment_blank2" >
+        <action
+            android:id="@+id/action_blankFragment2_to_blankFragment1"
+            app:destination="@id/blankFragment1" />
+        <argument
+            android:name="key"
+            app:argType="string"
+            android:defaultValue="Default Value" />
+    </fragment>
+</navigation>
