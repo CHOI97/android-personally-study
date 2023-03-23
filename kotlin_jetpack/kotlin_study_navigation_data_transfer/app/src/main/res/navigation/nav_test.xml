@@ -18,5 +18,13 @@
         android:id="@+id/blankFragment2"
         android:name="com.example.kotlin_study_navigation_data_transfer.BlankFragment2"
         android:label="fragment_blank2"
-        tools:layout="@layout/fragment_blank2" />
+        tools:layout="@layout/fragment_blank2" >
+        <action
+            android:id="@+id/action_blankFragment2_to_blankFragment1"
+            app:destination="@id/blankFragment1" />
+        <argument
+            android:name="key"
+            app:argType="string"
+            android:defaultValue="Default Value" />
+    </fragment>
 </navigation>
