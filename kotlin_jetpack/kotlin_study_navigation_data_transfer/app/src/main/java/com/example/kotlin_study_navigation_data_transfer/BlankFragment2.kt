@@ -21,7 +21,7 @@ class BlankFragment2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-//        val view = inflater.inflate(R.layout.fragment_blank2, container, false)
+        val view = inflater.inflate(R.layout.fragment_blank2, container, false)
 //        val getString = arguments?.getString("key")
 //        Log.d("BlankFragment2",getString.toString())
 
