@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.example.kotlin_modern_kakao_book_api'
     compileSdk 33
@@ -14,6 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField "String", "kakao_api_key", properties["KAKAO_API_KEY"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
