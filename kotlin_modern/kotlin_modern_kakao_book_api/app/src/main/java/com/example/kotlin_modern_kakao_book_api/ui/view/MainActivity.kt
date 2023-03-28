@@ -1,11 +1,9 @@
-package com.example.kotlin_modern_kakao_book_api
+package com.example.kotlin_modern_kakao_book_api.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlin_modern_kakao_book_api.R
 import com.example.kotlin_modern_kakao_book_api.databinding.ActivityMainBinding
-import com.example.kotlin_modern_kakao_book_api.ui.view.FavoriteFragment
-import com.example.kotlin_modern_kakao_book_api.ui.view.SearchFragment
-import com.example.kotlin_modern_kakao_book_api.ui.view.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
