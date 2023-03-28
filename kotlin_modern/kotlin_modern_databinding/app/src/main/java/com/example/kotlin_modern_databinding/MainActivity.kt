@@ -20,24 +20,17 @@ class MainActivity : AppCompatActivity() {
 
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
 
-        val factory  = MyViewModelFactory(10, this)
+
+        val myRepositoryImpl = MyRepositoryImpl(10)
+        val factory  = MyViewModelFactory(10, myRepositoryImpl,this)
         val myViewModel = ViewModelProvider(this, factory).get(MyViewModel::class.java)
         binding.lifecycleOwner = this
         binding.viewModel = myViewModel
         binding.btn.setOnClickListener {
-//            myViewModel.saveState()
-            myViewModel.liveCounter.value = myViewModel.liveCounter.value?.plus(10)
-            Log.d("myViewModel LiveCounter value " , myViewModel.liveCounter.value.toString())
+            myViewModel.increaseCounter()
         }
 
 
-        // 라이브 데이터 옵저빙
-//        myViewModel.liveCounter.observe(this){ counter ->
-//            binding.tv.text = counter.toString()
-//        }
-//        myViewModel.modifiedCounter.observe(this){ counter ->
-//            binding.tv.text = counter.toString()
-//        }
 
     }
 }
