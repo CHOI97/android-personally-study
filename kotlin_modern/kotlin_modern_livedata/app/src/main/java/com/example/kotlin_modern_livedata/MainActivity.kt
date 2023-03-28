@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             myViewModel.saveState()
             myViewModel.liveCounter.value = myViewModel.liveCounter.value?.plus(1)
         }
+        // 라이브 데이터 옵저빙
         myViewModel.liveCounter.observe(this){ counter ->
             binding.tv.text = counter.toString()
         }
