@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             binding.bottomNavigationMenu.selectedItemId = R.id.fragment_search
         }
         val bookSearchRepository = BookSearchRepositoryImpl()
-        val factory = BookSearchViewModelProviderFactory(bookSearchRepository)
+        val factory = BookSearchViewModelProviderFactory(bookSearchRepository, this)
         bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
     }
 
