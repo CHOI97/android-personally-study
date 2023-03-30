@@ -43,7 +43,9 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationMenu.setupWithNavController(navController)
 
         appBarConfiguration = AppBarConfiguration(
-            navController.graph
+            setOf(
+                R.id.fragment_favorite, R.id.fragment_search, R.id.fragment_settings
+            )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
