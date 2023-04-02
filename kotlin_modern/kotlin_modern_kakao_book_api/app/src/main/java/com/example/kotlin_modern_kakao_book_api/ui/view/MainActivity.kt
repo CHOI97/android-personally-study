@@ -10,6 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.kotlin_modern_kakao_book_api.R
+import com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDatabase
 import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepositoryImpl
 import com.example.kotlin_modern_kakao_book_api.databinding.ActivityMainBinding
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
@@ -31,7 +32,8 @@ class MainActivity : AppCompatActivity() {
 //            binding.bottomNavigationMenu.selectedItemId = R.id.fragment_search
 //        }
         setupJetpackNavigation()
-        val bookSearchRepository = BookSearchRepositoryImpl()
+        val database = BookSearchDatabase.getInstance(this)
+        val bookSearchRepository = BookSearchRepositoryImpl(database)
         val factory = BookSearchViewModelProviderFactory(bookSearchRepository, this)
         bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
     }

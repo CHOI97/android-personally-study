@@ -1,6 +1,7 @@
 package com.example.kotlin_modern_kakao_book_api.ui.viewmodel
 
 import androidx.lifecycle.*
+import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.data.model.SearchResponse
 import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepository
 import kotlinx.coroutines.Dispatchers
@@ -23,6 +24,17 @@ class BookSearchViewModel(
             }
         }
     }
+
+    // Room
+    fun saveBook(book: Book) = viewModelScope.launch(Dispatchers.IO) {
+        bookSearchRepository.insertBook(book)
+    }
+
+    fun deleteBook(book: Book) = viewModelScope.launch(Dispatchers.IO) {
+        bookSearchRepository.deleteBook(book)
+    }
+
+    val favoriteBook: LiveData<List<Book>> = bookSearchRepository.getFavoriteBooks()
 
     // SavedState
     var query = String()
