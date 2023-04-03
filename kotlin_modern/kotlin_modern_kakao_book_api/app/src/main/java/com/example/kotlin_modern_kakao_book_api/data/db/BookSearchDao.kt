@@ -1,8 +1,8 @@
 package com.example.kotlin_modern_kakao_book_api.data.db
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.kotlin_modern_kakao_book_api.data.model.Book
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookSearchDao {
@@ -13,6 +13,7 @@ interface BookSearchDao {
     @Delete
     suspend fun deleteBook(book: Book)
 
+    // LiveData -> Flow
     @Query("SELECT * FROM books")
-    fun getFavoriteBooks(): LiveData<List<Book>>
+    fun getFavoriteBooks(): Flow<List<Book>>
 }

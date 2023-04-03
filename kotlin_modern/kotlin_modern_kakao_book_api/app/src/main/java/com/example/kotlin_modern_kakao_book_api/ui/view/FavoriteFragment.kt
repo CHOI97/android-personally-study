@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -15,6 +17,8 @@ import com.example.kotlin_modern_kakao_book_api.databinding.FragmentFavoriteBind
 import com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchAdapter
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 class FavoriteFragment : Fragment() {
     private var _binding: FragmentFavoriteBinding? = null
@@ -37,9 +41,23 @@ class FavoriteFragment : Fragment() {
 
         bookSearchViewModel = (activity as MainActivity).bookSearchViewModel
         setupRecyclerView()
-        bookSearchViewModel.favoriteBook.observe(viewLifecycleOwner, Observer {
-            bookSearchAdapter.submitList(it)
-        })
+
+        // LiveData -> Flow
+//        bookSearchViewModel.favoriteBook.observe(viewLifecycleOwner, Observer {
+//            bookSearchAdapter.submitList(it)
+//        })
+//        lifecycleScope.launch {
+//            bookSearchViewModel.favoriteBook.collectLatest {
+//                bookSearchAdapter.submitList(it)
+//            }
+//        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                bookSearchViewModel.favoriteBook.collectLatest {
+                    bookSearchAdapter.submitList(it)
+                }
+            }
+        }
     }
 
     private fun setupRecyclerView() {

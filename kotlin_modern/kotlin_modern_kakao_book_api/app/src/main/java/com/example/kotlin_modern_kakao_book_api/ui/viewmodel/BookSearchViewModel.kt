@@ -5,6 +5,9 @@ import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.data.model.SearchResponse
 import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class BookSearchViewModel(
@@ -34,7 +37,10 @@ class BookSearchViewModel(
         bookSearchRepository.deleteBook(book)
     }
 
-    val favoriteBook: LiveData<List<Book>> = bookSearchRepository.getFavoriteBooks()
+    // LiveData -> Flow -> State Flow
+//    val favoriteBook: Flow<List<Book>> = bookSearchRepository.getFavoriteBooks()
+    val favoriteBook: StateFlow<List<Book>> = bookSearchRepository.getFavoriteBooks()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), listOf())
 
     // SavedState
     var query = String()
