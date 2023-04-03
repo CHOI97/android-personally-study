@@ -8,4 +8,7 @@ object Constants {
 
     // secrets gradle plug-in 사용도 가능
     const val SEARCH_BOOKS_TIME_DELAY = 100L
+
+    // DataStore
+    const val DATASTORE_NAME = "preferences_datastore"
 }
