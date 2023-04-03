@@ -1,8 +1,8 @@
 package com.example.kotlin_modern_kakao_book_api.data.repository
 
-import androidx.lifecycle.LiveData
 import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.data.model.SearchResponse
+import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 
 
@@ -19,5 +19,6 @@ interface BookSearchRepository {
 
     suspend fun deleteBook(book: Book)
 
-    fun getFavoriteBooks(): LiveData<List<Book>>
+    // LiveData -> Flow
+    fun getFavoriteBooks(): Flow<List<Book>>
 }
