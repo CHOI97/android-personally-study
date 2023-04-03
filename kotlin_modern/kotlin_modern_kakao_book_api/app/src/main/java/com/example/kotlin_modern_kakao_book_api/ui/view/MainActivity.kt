@@ -1,7 +1,9 @@
 package com.example.kotlin_modern_kakao_book_api.ui.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -15,6 +17,7 @@ import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchReposi
 import com.example.kotlin_modern_kakao_book_api.databinding.ActivityMainBinding
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModelProviderFactory
+import com.example.kotlin_modern_kakao_book_api.util.Constants.DATASTORE_NAME
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
@@ -24,7 +27,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var bookSearchViewModel: BookSearchViewModel
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
+
+    override
+
+    fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 //        setupBottomNavigationView()
@@ -33,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 //        }
         setupJetpackNavigation()
         val database = BookSearchDatabase.getInstance(this)
-        val bookSearchRepository = BookSearchRepositoryImpl(database)
+        val bookSearchRepository = BookSearchRepositoryImpl(database, dataStore)
         val factory = BookSearchViewModelProviderFactory(bookSearchRepository, this)
         bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
     }
