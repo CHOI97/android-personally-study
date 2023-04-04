@@ -1,5 +1,6 @@
 package com.example.kotlin_modern_kakao_book_api.data.repository
 
+import androidx.paging.PagingData
 import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.data.model.SearchResponse
 import kotlinx.coroutines.flow.Flow
@@ -26,4 +27,6 @@ interface BookSearchRepository {
     suspend fun saveSortMode(mode: String)
 
     suspend fun getSortMode(): Flow<String>
+
+    fun getFavoritePagingBooks(): Flow<PagingData<Book>>
 }

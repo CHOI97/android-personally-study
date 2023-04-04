@@ -11,4 +11,7 @@ object Constants {
 
     // DataStore
     const val DATASTORE_NAME = "preferences_datastore"
+
+    // Paging
+    const val PAGING_SIZE = 15
 }

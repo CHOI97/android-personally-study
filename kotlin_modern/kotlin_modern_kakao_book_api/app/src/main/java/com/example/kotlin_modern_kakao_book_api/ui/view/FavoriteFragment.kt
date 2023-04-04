@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin_modern_kakao_book_api.databinding.FragmentFavoriteBinding
-import com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchAdapter
+import com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchPagingAdapter
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
 import com.example.kotlin_modern_kakao_book_api.util.collectLatestStateFlow
 import com.google.android.material.snackbar.Snackbar
@@ -21,7 +21,9 @@ class FavoriteFragment : Fragment() {
     private val binding: FragmentFavoriteBinding get() = _binding!!
 
     private lateinit var bookSearchViewModel: BookSearchViewModel
-    private lateinit var bookSearchAdapter: BookSearchAdapter
+
+    //    private lateinit var bookSearchAdapter: BookSearchAdapter
+    private lateinit var bookSearchAdapter: BookSearchPagingAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -54,13 +56,13 @@ class FavoriteFragment : Fragment() {
 //                }
 //            }
 //        }
-        collectLatestStateFlow(bookSearchViewModel.favoriteBook) {
-            bookSearchAdapter.submitList(it)
+        collectLatestStateFlow(bookSearchViewModel.favoritePagingBooks) {
+            bookSearchAdapter.submitData(it)
         }
     }
 
     private fun setupRecyclerView() {
-        bookSearchAdapter = BookSearchAdapter()
+        bookSearchAdapter = BookSearchPagingAdapter()
         binding.rvFavoriteBooks.apply {
             setHasFixedSize(true)
             layoutManager =
@@ -92,15 +94,22 @@ class FavoriteFragment : Fragment() {
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                     val position = viewHolder.bindingAdapterPosition
-                    val book = bookSearchAdapter.currentList[position]
-                    bookSearchViewModel.deleteBook(book)
-                    Snackbar.make(view, "Book has deleted", Snackbar.LENGTH_SHORT).apply {
-                        setAction("Undo") {
-                            bookSearchViewModel.saveBook(book)
+//                    val book = bookSearchAdapter.currentList[position]
+//                    bookSearchViewModel.deleteBook(book)
+//                    Snackbar.make(view, "Book has deleted", Snackbar.LENGTH_SHORT).apply {
+//                        setAction("Undo") {
+//                            bookSearchViewModel.saveBook(book)
+//                        }.show()
+                    val pagedBook = bookSearchAdapter.peek(position)
+                    pagedBook?.let { book ->
+                        bookSearchViewModel.deleteBook(book)
+                        Snackbar.make(view, "Book has deleted", Snackbar.LENGTH_SHORT).apply {
+                            setAction("Undo") {
+                                bookSearchViewModel.saveBook(book)
+                            }
                         }.show()
                     }
                 }
-
             }
         ItemTouchHelper(itemTouchHelperCallback).apply {
             attachToRecyclerView(binding.rvFavoriteBooks)
