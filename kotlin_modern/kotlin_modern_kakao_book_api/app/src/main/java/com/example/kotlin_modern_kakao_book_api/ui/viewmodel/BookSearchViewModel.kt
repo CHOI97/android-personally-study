@@ -1,6 +1,8 @@
 package com.example.kotlin_modern_kakao_book_api.ui.viewmodel
 
 import androidx.lifecycle.*
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.data.model.SearchResponse
 import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepository
@@ -67,4 +69,9 @@ class BookSearchViewModel(
     suspend fun getSortMode() = withContext(Dispatchers.IO) {
         bookSearchRepository.getSortMode().first()
     }
+
+    val favoritePagingBooks: StateFlow<PagingData<Book>> =
+        bookSearchRepository.getFavoritePagingBooks()
+            .cachedIn(viewModelScope)
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), PagingData.empty())
 }
