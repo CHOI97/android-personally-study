@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.work.WorkManager
 import com.example.kotlin_modern_kakao_book_api.R
 import com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDatabase
 import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepositoryImpl
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
+    private val workManager = WorkManager.getInstance(application)
 
     override
-
     fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         setupJetpackNavigation()
         val database = BookSearchDatabase.getInstance(this)
         val bookSearchRepository = BookSearchRepositoryImpl(database, dataStore)
-        val factory = BookSearchViewModelProviderFactory(bookSearchRepository, this)
+        val factory = BookSearchViewModelProviderFactory(bookSearchRepository, workManager, this)
         bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
     }
 
