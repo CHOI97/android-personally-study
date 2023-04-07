@@ -1,25 +1,19 @@
 package com.example.kotlin_modern_kakao_book_api.ui.view
 
-import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.datastore.preferences.preferencesDataStore
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.work.WorkManager
 import com.example.kotlin_modern_kakao_book_api.R
-import com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDatabase
-import com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchRepositoryImpl
 import com.example.kotlin_modern_kakao_book_api.databinding.ActivityMainBinding
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
-import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModelProviderFactory
-import com.example.kotlin_modern_kakao_book_api.util.Constants.DATASTORE_NAME
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
@@ -29,8 +23,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
-    private val workManager = WorkManager.getInstance(application)
+//    private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
+//    private val workManager = WorkManager.getInstance(application)
 
     override
     fun onCreate(savedInstanceState: Bundle?) {
@@ -41,10 +35,10 @@ class MainActivity : AppCompatActivity() {
 //            binding.bottomNavigationMenu.selectedItemId = R.id.fragment_search
 //        }
         setupJetpackNavigation()
-        val database = BookSearchDatabase.getInstance(this)
-        val bookSearchRepository = BookSearchRepositoryImpl(database, dataStore)
-        val factory = BookSearchViewModelProviderFactory(bookSearchRepository, workManager, this)
-        bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
+//        val database = BookSearchDatabase.getInstance(this)
+//        val bookSearchRepository = BookSearchRepositoryImpl(database, dataStore)
+//        val factory = BookSearchViewModelProviderFactory(bookSearchRepository, workManager, this)
+//        bookSearchViewModel = ViewModelProvider(this, factory)[BookSearchViewModel::class.java]
     }
 
     private fun setupJetpackNavigation() {

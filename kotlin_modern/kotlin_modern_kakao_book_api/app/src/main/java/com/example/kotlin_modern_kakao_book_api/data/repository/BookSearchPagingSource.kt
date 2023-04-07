@@ -2,16 +2,18 @@ package com.example.kotlin_modern_kakao_book_api.data.repository
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.kotlin_modern_kakao_book_api.data.api.RetrofitInstance.api
+import com.example.kotlin_modern_kakao_book_api.data.api.BookSearchApi
 import com.example.kotlin_modern_kakao_book_api.data.model.Book
 import com.example.kotlin_modern_kakao_book_api.util.Constants.PAGING_SIZE
 import retrofit2.HttpException
 import java.io.IOException
 
 class BookSearchPagingSource(
+    private val api: BookSearchApi,
     private val query: String,
-    private val sort: String
+    private val sort: String,
 ) : PagingSource<Int, Book>() {
+
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Book> {
         return try {
             val pageNumber = params.key ?: STARTING_PAGE_INDEX
@@ -50,5 +52,4 @@ class BookSearchPagingSource(
     companion object {
         const val STARTING_PAGE_INDEX = 1
     }
-
 }

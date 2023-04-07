@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.example.kotlin_modern_kakao_book_api.databinding.FragmentBookBinding
 import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
@@ -17,7 +18,9 @@ class BookFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val args by navArgs<BookFragmentArgs>()
-    private lateinit var bookSearchViewModel: BookSearchViewModel
+
+    //    private lateinit var bookSearchViewModel: BookSearchViewModel
+    private val bookSearchViewModel by activityViewModels<BookSearchViewModel>()
 
     override
     fun onCreateView(
@@ -33,8 +36,7 @@ class BookFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        bookSearchViewModel = (activity as MainActivity).bookSearchViewModel
+//        bookSearchViewModel = (activity as MainActivity).bookSearchViewModel
         val book = args.book
         binding.webview.apply {
             webViewClient = WebViewClient()
