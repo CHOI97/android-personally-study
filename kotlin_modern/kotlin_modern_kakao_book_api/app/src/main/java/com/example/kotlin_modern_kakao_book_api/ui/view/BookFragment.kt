@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.kotlin_modern_kakao_book_api.databinding.FragmentBookBinding
-import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
+import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookViewModel
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class BookFragment : Fragment() {
     private var _binding: FragmentBookBinding? = null
     private val binding get() = _binding!!
@@ -20,7 +22,8 @@ class BookFragment : Fragment() {
     private val args by navArgs<BookFragmentArgs>()
 
     //    private lateinit var bookSearchViewModel: BookSearchViewModel
-    private val bookSearchViewModel by activityViewModels<BookSearchViewModel>()
+//    private val bookSearchViewModel by activityViewModels<BookSearchViewModel>()
+    private val bookViewModel by viewModels<BookViewModel>()
 
     override
     fun onCreateView(
@@ -45,7 +48,7 @@ class BookFragment : Fragment() {
         }
 
         binding.fabFavorite.setOnClickListener {
-            bookSearchViewModel.saveBook(book)
+            bookViewModel.saveBook(book)
             Snackbar.make(view, "Book has saved", Snackbar.LENGTH_SHORT).show()
         }
     }
