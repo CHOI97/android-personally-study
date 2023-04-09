@@ -29,8 +29,8 @@ android {
         named("release") {
 //        release {
 //            minifyEnabled false
-            isMinifyEnabled = false
 //            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            minifyEnabled = false
             proguardFiles(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
                     "proguard-rules.pro"
@@ -42,7 +42,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = "11"
     }
     buildFeatures {
         viewBinding = true
