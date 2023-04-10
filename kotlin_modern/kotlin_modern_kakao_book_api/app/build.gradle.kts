@@ -1,27 +1,28 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("androidx.navigation.safeargs.kotlin")
-    id("kotlin-parcelize")
-    id("com.google.dagger.hilt.android")
+    id(Plugins.ANDROID_APPLICATION)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KAPT)
+    id(Plugins.SECRETS_GRADLE_PLUGIN)
+    id(Plugins.SAFEARGS)
+    id(Plugins.PARCELIZE)
+    id(Plugins.HILT_PLUGIN)
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 android {
-    namespace 'com.example.kotlin_modern_kakao_book_api'
-    compileSdk = 33
+    namespace = "com.example.kotlin_modern_kakao_book_api"
+    compileSdk = DefaultConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
         applicationId = "com.example.kotlin_modern_kakao_book_api"
-        minSdk = 29
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = DefaultConfig.MIN_SDK_VERSION
+        targetSdk = DefaultConfig.TARGET_SDK_VERSION
+        versionCode = DefaultConfig.VERSION_CODE
+        versionName = DefaultConfig.VERSION_NAME
 
-        buildConfigField "String", "kakao_api_key", properties["KAKAO_API_KEY"]
+//        buildConfigField = "String", "kakao_api_key", properties["KAKAO_API_KEY"]
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -30,10 +31,10 @@ android {
 //        release {
 //            minifyEnabled false
 //            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            minifyEnabled = false
+            isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
     }
@@ -54,72 +55,72 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.APP_COMPAT)
+    implementation(Dependencies.MATERIAL)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    testImplementation(Testing.JUNIT4)
+    androidTestImplementation(Testing.ANDROID_JUNIT)
+    androidTestImplementation(Testing.ESPRESSO_CORE)
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation(Dependencies.RETROFIT)
+    implementation(Dependencies.RETROFIT_CONVERTER_MOSHI)
 
     // Moshi
-    implementation("com.squareup.moshi:moshi:1.13.0")
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    implementation(Dependencies.MOSHI)
+    kapt(Dependencies.MOSHI_KAPT)
 
     // Okhttp
-    implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation(Dependencies.OKHTTP)
+    implementation(Dependencies.OKHTTP_LOGGING_INTERCEPTOR)
 
     // Lifecycle
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.1")
+    implementation(Dependencies.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Dependencies.LIFECYCLE_RUNTIME_KTX)
+    implementation(Dependencies.LIFECYCLE_VIEWMODEL_KTX)
 
     // Coroutine
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
+    implementation(Dependencies.COROUTINE_CORE)
+    implementation(Dependencies.COROUTINE_ANDROID)
 
     // Coil
-    implementation("io.coil-kt:coil:2.0.0-rc03")
+    implementation(Dependencies.COIL)
 
     // Recyclerview
-    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation(Dependencies.RECYCLERVIEW)
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+    implementation(Dependencies.NAVIGATION_FRAGMENT_KTX)
+    implementation(Dependencies.NAVIGATION_UI_KTX)
 
     // Room
-    implementation("androidx.room:room-runtime:2.5.1")
-    implementation("androidx.room:room-ktx:2.5.1")
-    kapt("androidx.room:room-compiler:2.5.1")
-    implementation("androidx.room:room-paging:2.5.1")
+    implementation(Dependencies.ROOM_RUNTIME)
+    implementation(Dependencies.ROOM_KTX)
+    kapt(Dependencies.ROOM_KAPT)
+    implementation(Dependencies.ROOM_PAGING)
 
     // Kotlin serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+    implementation(Dependencies.KOTLIN_SERIALIZATION)
 
     // DataStore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation(Dependencies.PREFERENCES_DATASTORE)
 
     // Paging
-    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+    implementation(Dependencies.PAGING)
 
     // WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation(Dependencies.WORKMANGER)
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-compiler:2.44")
+    implementation(Dependencies.DAGGER_HILT)
+    kapt(Dependencies.DAGGER_HILT_KAPT)
 
     // ViewModel delegate
-    implementation("androidx.activity:activity-ktx:1.4.0")
-    implementation("androidx.fragment:fragment-ktx:1.4.1")
+    implementation(Dependencies.ACTIVITY_KTX)
+    implementation(Dependencies.FRAGMENT_KTX)
 
     // Hilt extension
-    implementation("androidx.hilt:hilt-work:1.0.0")
-    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation(Dependencies.HILT_EXTENSION_WORK)
+    kapt(Dependencies.HILT_EXTENSION_KAPT)
 }

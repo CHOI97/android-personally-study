@@ -4,7 +4,7 @@ import com.example.kotlin_modern_kakao_book_api.BuildConfig
 
 object Constants {
     const val BASE_URL = "https://dapi.kakao.com/"
-    const val API_KEY = BuildConfig.kakao_api_key
+    const val API_KEY = BuildConfig.KAKAO_API_KEY
 
     // secrets gradle plug-in 사용도 가능
     const val SEARCH_BOOKS_TIME_DELAY = 100L
