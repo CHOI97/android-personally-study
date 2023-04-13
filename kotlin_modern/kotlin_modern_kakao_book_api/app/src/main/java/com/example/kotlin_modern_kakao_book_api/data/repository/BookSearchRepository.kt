@@ -16,6 +16,7 @@ interface BookSearchRepository {
         size: Int
     ): Response<SearchResponse>
 
+    // Room
     suspend fun insertBook(book: Book)
 
     suspend fun deleteBook(book: Book)
