@@ -23,7 +23,9 @@ android {
         versionName = DefaultConfig.VERSION_NAME
 
 //        buildConfigField = "String", "kakao_api_key", properties["KAKAO_API_KEY"]
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        // Hilt Test
+        testInstrumentationRunner = "com.example.kotlin_modern_kakao_book_api.HiltTestRunner"
     }
 
     buildTypes {
@@ -72,6 +74,7 @@ dependencies {
     testImplementation("org.robolectric:robolectric:4.9.1")
     testImplementation("androidx.test.ext:junit:1.1.5")
     testImplementation("androidx.test:core:1.5.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.2")
 
     androidTestImplementation(Testing.ANDROID_JUNIT)
     androidTestImplementation(Testing.ESPRESSO_CORE)
@@ -79,6 +82,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:truth:1.5.0")
     androidTestImplementation("androidx.test:runner:1.5.2")
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.2")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
     // Retrofit
     implementation(Dependencies.RETROFIT)
     implementation(Dependencies.RETROFIT_CONVERTER_MOSHI)
