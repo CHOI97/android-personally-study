@@ -30,16 +30,8 @@ class NewsTitleFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         isTwoPane = activity?.findViewById<View>(R.id.newsContentLayout) != null
 
-
         binding.newsTitleRecyclerView.layoutManager = LinearLayoutManager(activity)
         binding.newsTitleRecyclerView.adapter = NewsAdapter(getNews())
-        //        val temp = activity?.findViewById<RecyclerView>(R.id.newsTitleRecyclerView)
-//        val newsTitleRecyclerView = temp as RecyclerView
-//        val mlayoutManager = LinearLayoutManager(activity)
-//        newsTitleRecyclerView.layoutManager = mlayoutManager
-
-//        val madapter = NewsAdapter(getNews())
-//        newsTitleRecyclerView.adapter = madapter
     }
 
     private fun getNews(): List<News> {
@@ -85,7 +77,6 @@ class NewsTitleFragment : Fragment() {
                     val newsContentFrag = fragmentManager.findFragmentById(R.id.newsContentFrag) as NewsContentFragment
                     newsContentFrag.refresh(news.title,news.content)
                 } else {
-                    Log.d("action start", "before")
                     NewsContentActivity.actionStart(context!!, news.title, news.content)
                 }
             }

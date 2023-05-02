@@ -30,12 +30,6 @@ class NewsContentFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.contentLayout.visibility = View.VISIBLE
-//        binding.newsTitle.text = arguments?.getString("news_title")
-//        binding.newsContent.text = arguments?.getString("content")
-//        contentLayout = view.findViewById(R.id.contentLayout)
-//        newsTitle = view.findViewById(R.id.newsTitle)
-//        newsContent = view.findViewById(R.id.newsContent)
     }
 
     override fun onDestroyView() {
