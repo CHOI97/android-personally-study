@@ -25,13 +25,12 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:hint="입력해주세요."
-                android:text="@{viewmodel.editLiveData}"/>
+                android:text="@={viewmodel._editLiveData}"/>
 
             <CheckBox
                 android:id="@+id/cb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewmodel.hasChecked}"
                 />
         </LinearLayout>
 
@@ -39,7 +38,7 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewmodel.textLiveData}"
+            android:text="@={viewmodel._editLiveData}"
             android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

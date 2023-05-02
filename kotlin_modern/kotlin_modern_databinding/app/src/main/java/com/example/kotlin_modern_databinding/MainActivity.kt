@@ -2,7 +2,6 @@ package com.example.kotlin_modern_databinding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.kotlin_modern_databinding.databinding.ActivityMainBinding
@@ -17,13 +16,12 @@ import com.example.kotlin_modern_databinding.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
 
 
         val myRepositoryImpl = MyRepositoryImpl(10)
         val factory  = MyViewModelFactory(10, myRepositoryImpl,this)
-        val myViewModel = ViewModelProvider(this, factory).get(MyViewModel::class.java)
+        val myViewModel = ViewModelProvider(this, factory)[MyViewModel::class.java]
         binding.lifecycleOwner = this
         binding.viewModel = myViewModel
         binding.btn.setOnClickListener {
