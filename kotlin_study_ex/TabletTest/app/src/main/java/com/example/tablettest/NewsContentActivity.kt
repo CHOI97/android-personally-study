@@ -14,6 +14,7 @@ class NewsContentActivity : AppCompatActivity() {
     companion object {
         fun actionStart(context: Context, title: String, content: String) {
             val intent = Intent(context, NewsContentActivity::class.java).apply {
+                Log.d("actionStart","start")
                 putExtra("news_title", title)
                 putExtra("news_content", content)
             }
@@ -27,20 +28,13 @@ class NewsContentActivity : AppCompatActivity() {
         setContentView(binding.root)
         Log.d("activity", "NewsContentActivity")
 
+        val fragmentManager = supportFragmentManager
         val title = intent.getStringExtra("news_title")
         val content = intent.getStringExtra("news_content")
-//        val newsContentFrag = supportFragmentManager.findFragmentById(R.id.newsContentFrag)
-        val newsContentFrag = NewsContentFragment()
+        val newsContentFrag = fragmentManager.findFragmentById(R.id.newsContentFrag) as NewsContentFragment
 
         if (title != null && content != null) {
-            val bundle = Bundle()
-            bundle.putString("news_title",title)
-            bundle.putString("content",content)
-//            newsContentFrag.refresh(title,content)
-            newsContentFrag.arguments = bundle
-            supportFragmentManager.beginTransaction().replace(R.id.newsContentFrag,newsContentFrag)
-                .addToBackStack(null)
-                .commit()
+            newsContentFrag.refresh(title,content)
         }
     }
 }

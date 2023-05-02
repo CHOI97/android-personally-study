@@ -30,9 +30,10 @@ class NewsTitleFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         isTwoPane = activity?.findViewById<View>(R.id.newsContentLayout) != null
 
-//        val temp = activity?.findViewById<RecyclerView>(R.id.newsTitleRecyclerView)
+
         binding.newsTitleRecyclerView.layoutManager = LinearLayoutManager(activity)
         binding.newsTitleRecyclerView.adapter = NewsAdapter(getNews())
+        //        val temp = activity?.findViewById<RecyclerView>(R.id.newsTitleRecyclerView)
 //        val newsTitleRecyclerView = temp as RecyclerView
 //        val mlayoutManager = LinearLayoutManager(activity)
 //        newsTitleRecyclerView.layoutManager = mlayoutManager
@@ -68,24 +69,23 @@ class NewsTitleFragment : Fragment() {
     inner class NewsAdapter(val newsList: List<News>) :
         RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
-        inner class ViewHolder(private val binding: NewsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        inner class ViewHolder(private val binding: NewsItemBinding) :
+            RecyclerView.ViewHolder(binding.root) {
             val newsTitle: TextView = binding.newsTitle
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val view =
-                NewsItemBinding.inflate(LayoutInflater.from(parent.context),parent, false)
+                NewsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             val holder = ViewHolder(view)
             holder.itemView.setOnClickListener {
                 val news = newsList[holder.adapterPosition]
                 if (isTwoPane) {
-                    Log.d("holder","click holder")
-//                    val newsContentFrag = findViewById(R.id.newsContentFrag)
-//                    val fragment = holder.newsContentFrag as NewsContentFragment
-//                    fragment.refresh(news.title, news.content)
-
+                    val fragmentManager = parentFragmentManager
+                    val newsContentFrag = fragmentManager.findFragmentById(R.id.newsContentFrag) as NewsContentFragment
+                    newsContentFrag.refresh(news.title,news.content)
                 } else {
-                    Log.d("action start","before")
+                    Log.d("action start", "before")
                     NewsContentActivity.actionStart(context!!, news.title, news.content)
                 }
             }
