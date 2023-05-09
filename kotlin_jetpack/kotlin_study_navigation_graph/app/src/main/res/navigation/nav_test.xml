@@ -40,7 +40,7 @@
         <action
             android:id="@+id/action_blankFragment4_to_blankFragment5"
             app:destination="@id/blankFragment5"
-            app:popUpTo="@id/blankFragment1" />
+            app:popUpTo="@id/blankFragment4" />
     </fragment>
     <fragment
         android:id="@+id/blankFragment5"
