@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.kotlin_study_custom_dialog"
-        minSdk 33
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -30,9 +30,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
+    // Android 4.0
+    buildFeatures{
+        dataBinding  true
     }
+//    dataBinding{
+//        enabled true
+//    }
 }
 
 dependencies {
