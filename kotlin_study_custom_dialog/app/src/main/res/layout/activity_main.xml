@@ -13,26 +13,31 @@
         tools:context=".MainActivity">
 
         <Button
+            android:id="@+id/dialog1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="다이얼 로그 1번" />
+            android:text="기본 다이얼로그" />
 
         <Button
+            android:id="@+id/dialog2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다이얼 로그 2번" />
 
         <Button
+            android:id="@+id/dialog3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다이얼 로그 3번" />
 
         <Button
+            android:id="@+id/dialog4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다이얼 로그 4번" />
 
         <Button
+            android:id="@+id/dialog5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="다이얼 로그 5번" />
