@@ -38,25 +38,67 @@ class MainActivity : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setTitle("버튼이 있는 다이얼로그")
                 .setMessage("버튼 다이얼로그 입니다.")
-                .setPositiveButton("ok", object : DialogInterface.OnClickListener {
-                    override fun onClick(dialog: DialogInterface?, which: Int) {
-                        Log.d(TAG,"OK")
-                    }
-                })
-                .setNegativeButton("no", object : DialogInterface.OnClickListener {
-                    override fun onClick(dialog: DialogInterface?, which: Int) {
-                        Log.d(TAG,"NO")
-                    }
-                })
-                .setNeutralButton("neutral",object : DialogInterface.OnClickListener{
-                    override fun onClick(dialog: DialogInterface?, which: Int) {
-                        Log.d(TAG,"NEUTRAL")
-                    }
-
-                })
+                .setPositiveButton("ok"
+                ) { dialog, which -> Log.d(TAG, "OK") }
+                .setNegativeButton("no"
+                ) { dialog, which -> Log.d(TAG, "NO") }
+                .setNeutralButton("neutral"
+                ) { dialog, which -> Log.d(TAG, "NEUTRAL") }
                 .create()
                 .show()
         }
+        // 리스트
+        val array = arrayOf("dog", "cat", "cow")
+        binding.dialog3.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("list")
+                .setItems(array) { dialog, which ->
+                    val currentItem = array[which]
+                    Log.d("MyTag", "currentItem : $currentItem")
+                }
+                .show()
+        }
+        // 체크박스
+        val checkedArray = booleanArrayOf(true, false, true)
+        binding.dialog4.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("checkbox")
+                .setMultiChoiceItems(array, checkedArray
+                ) { dialog, which, isChecked ->
+                    Log.d(TAG, "which : $which, isChecked : $isChecked")
+                    checkedArray[which] = isChecked
+                }
+                .setPositiveButton("ok"
+                ) { dialog, which ->
+                    Log.d(
+                        TAG,
+                        "checkedItems : ${checkedArray.contentToString()}"
+                    )
+                }
+                .show()
+
+        }
+
+        // 라디오 버튼
+        binding.dialog5.setOnClickListener {
+            var checkedItemPosition = 0
+
+            AlertDialog.Builder(this)
+                .setTitle("radio")
+                .setSingleChoiceItems(array, checkedItemPosition, object : DialogInterface.OnClickListener {
+                    override fun onClick(dialog: DialogInterface, which: Int) {
+                        Log.d("MyTag", "which : $which")
+                        checkedItemPosition = which
+                    }
+                })
+                .setPositiveButton("ok", object : DialogInterface.OnClickListener {
+                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                        Log.d("MyTag", "checkedItemPosition : $checkedItemPosition")
+                    }
+                })
+                .show()
+        }
+
 
     }
 }
