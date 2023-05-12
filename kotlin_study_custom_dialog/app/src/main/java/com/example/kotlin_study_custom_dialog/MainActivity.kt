@@ -1,6 +1,7 @@
 package com.example.kotlin_study_custom_dialog
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.snackbar.Snackbar
@@ -13,6 +14,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.DataBindingUtil
+import com.example.kotlin_study_custom_dialog.databinding.ActivitiySecondBinding
 import com.example.kotlin_study_custom_dialog.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,11 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
 
         // 기본 다이얼로그
-        binding.dialog1.setOnClickListener {
+        binding.btnDefaultDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Title")
                 .setMessage("기본 다이얼로그")
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 버튼이 있는 다이얼로그
-        binding.dialog2.setOnClickListener {
+        binding.btnButtonDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("버튼이 있는 다이얼로그")
                 .setMessage("버튼 다이얼로그 입니다.")
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
         // 리스트
         val array = arrayOf("dog", "cat", "cow")
-        binding.dialog3.setOnClickListener {
+        binding.btnListDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("list")
                 .setItems(array) { dialog, which ->
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         }
         // 체크박스
         val checkedArray = booleanArrayOf(true, false, true)
-        binding.dialog4.setOnClickListener {
+        binding.btnCheckboxDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("checkbox")
                 .setMultiChoiceItems(array, checkedArray
@@ -80,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 라디오 버튼
-        binding.dialog5.setOnClickListener {
+        binding.btnRadioDialog.setOnClickListener {
             var checkedItemPosition = 0
 
             AlertDialog.Builder(this)
@@ -99,6 +101,11 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
+        binding.btnGoCustom.setOnClickListener {
+            val intent = Intent(this,SecondActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 }
