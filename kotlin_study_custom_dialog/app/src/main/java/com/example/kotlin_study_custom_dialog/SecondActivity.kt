@@ -17,6 +17,9 @@ class SecondActivity: AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        // Default Dialog
+        binding.dialog1.setOnClickListener {
+            CustomDialog(this).show()
+        }
     }
 }
