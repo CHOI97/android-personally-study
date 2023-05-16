@@ -18,6 +18,9 @@ import androidx.databinding.DataBindingUtil
 import com.example.kotlin_study_custom_dialog.databinding.ActivitiySecondBinding
 import com.example.kotlin_study_custom_dialog.databinding.ActivityMainBinding
 
+/*
+* Alert Dialog
+* */
 class MainActivity : AppCompatActivity() {
     private val TAG = "Dialog"
     private lateinit var binding: ActivityMainBinding
