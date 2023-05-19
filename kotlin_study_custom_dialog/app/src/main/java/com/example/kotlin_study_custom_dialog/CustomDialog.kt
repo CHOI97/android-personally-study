@@ -1,17 +1,12 @@
 package com.example.kotlin_study_custom_dialog
 
-import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
-import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.DialogFragment
-import com.example.kotlin_study_custom_dialog.databinding.DialogCustomFirstBinding
 import com.example.kotlin_study_custom_dialog.databinding.DialogDefaultBinding
 
 class CustomDialog(
