@@ -21,5 +21,8 @@ class SecondActivity: AppCompatActivity() {
         binding.dialog1.setOnClickListener {
             CustomDialog(this).show()
         }
+        binding.dialog2.setOnClickListener {
+            CustomDialogFragment().show(supportFragmentManager,"Dialog")
+        }
     }
 }
