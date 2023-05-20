@@ -1,0 +1,2 @@
+05-09 21:43:01.641 25968 25990 I TestRunner: started: delete_book_to_db(com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest)
+05-09 21:43:01.698 25968 25990 I TestRunner: finished: delete_book_to_db(com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest)

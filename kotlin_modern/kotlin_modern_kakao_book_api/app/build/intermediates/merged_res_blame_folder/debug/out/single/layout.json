@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/item_book_preview.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/item_book_preview.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/fragment_favorite.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_favorite.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/fragment_search.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_search.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/item_load_state.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/item_load_state.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/fragment_book.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_book.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/activity_main.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-58:/layout/fragment_settings.xml",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_settings.xml"
+    }
+]

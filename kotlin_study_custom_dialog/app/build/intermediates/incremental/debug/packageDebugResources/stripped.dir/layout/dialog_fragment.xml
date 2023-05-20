@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+     
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="#2B353E"
+        android:gravity="center"
+        android:orientation="vertical" android:tag="layout/dialog_fragment_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/tvSample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnSample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="GO" />
+    </LinearLayout>
+
+         

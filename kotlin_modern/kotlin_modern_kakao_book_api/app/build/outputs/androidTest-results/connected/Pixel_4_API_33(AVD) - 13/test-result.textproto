@@ -1,0 +1,120 @@
+# 2023-05-09T12:43:05.496Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 2
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "BookSearchDaoTest"
+    test_package: "com.example.kotlin_modern_kakao_book_api.data.db"
+    test_method: "delete_book_to_db"
+    start_time {
+      seconds: 1683636185
+      nanos: 134000000
+    }
+    end_time {
+      seconds: 1683636185
+      nanos: 205000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest-delete_book_to_db.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "BookSearchDaoTest"
+    test_package: "com.example.kotlin_modern_kakao_book_api.data.db"
+    test_method: "insert_book_to_db"
+    start_time {
+      seconds: 1683636185
+      nanos: 214000000
+    }
+    end_time {
+      seconds: 1683636185
+      nanos: 217000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/logcat-com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest-insert_book_to_db.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/choi97/choi/Android/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api/app/build/outputs/androidTest-results/connected/Pixel_4_API_33(AVD) - 13/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
