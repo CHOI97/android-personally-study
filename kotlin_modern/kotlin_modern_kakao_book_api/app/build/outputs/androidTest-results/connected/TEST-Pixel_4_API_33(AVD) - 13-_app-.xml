@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest" tests="2" failures="0" errors="0" skipped="0" time="0.302" timestamp="2023-05-09T12:43:05" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_4_API_33(AVD) - 13" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="delete_book_to_db" classname="com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest" time="0.008" />
+  <testcase name="insert_book_to_db" classname="com.example.kotlin_modern_kakao_book_api.data.db.BookSearchDaoTest" time="0.0" />
+</testsuite>

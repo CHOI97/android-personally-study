@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/layout_content_main.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/navigation_nav_graph.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/layout_fragment_second.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/layout_activity_main.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/layout_fragment_first.xml.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-merged_res-45:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/mipmap-mdpi/ic_launcher.webp"
+    }
+]

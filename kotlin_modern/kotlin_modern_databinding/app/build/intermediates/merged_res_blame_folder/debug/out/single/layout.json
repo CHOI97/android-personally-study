@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.kotlin_modern_databinding.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.example.kotlin_modern_databinding.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/choi97/.gradle/daemon/7.4/com.example.kotlin_modern_databinding.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "/Users/choi97/.gradle/daemon/7.4/com.example.kotlin_modern_databinding.app-main-39:/layout/activity_main.xml"
+    }
+]

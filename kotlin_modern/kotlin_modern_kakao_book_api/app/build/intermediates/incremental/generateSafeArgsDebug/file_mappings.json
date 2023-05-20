@@ -1,0 +1,1 @@
+[{"navFile":"src/main/res/navigation/booksearch_nav_graph.xml","javaFiles":["com.example.kotlin_modern_kakao_book_api.ui.view.FavoriteFragmentDirections","com.example.kotlin_modern_kakao_book_api.ui.view.SearchFragmentDirections","com.example.kotlin_modern_kakao_book_api.ui.view.BookFragmentArgs"]}]

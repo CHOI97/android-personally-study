@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.tablettest.app-mergeDebugResources-30:/layout/news_title_fragment.xml",
+        "source": "com.example.tablettest.app-main-33:/layout/news_title_fragment.xml"
+    },
+    {
+        "merged": "com.example.tablettest.app-mergeDebugResources-30:/layout/activity_news_content.xml",
+        "source": "com.example.tablettest.app-main-33:/layout/activity_news_content.xml"
+    },
+    {
+        "merged": "com.example.tablettest.app-mergeDebugResources-30:/layout/news_content_frag.xml",
+        "source": "com.example.tablettest.app-main-33:/layout/news_content_frag.xml"
+    },
+    {
+        "merged": "com.example.tablettest.app-mergeDebugResources-30:/layout/news_item.xml",
+        "source": "com.example.tablettest.app-main-33:/layout/news_item.xml"
+    },
+    {
+        "merged": "com.example.tablettest.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.example.tablettest.app-main-33:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/drawable_ic_settings_24.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/drawable/ic_settings_24.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/menu_bottom_navigation_menu.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/menu/bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_item_load_state.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/item_load_state.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/xml_backup_rules.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/drawable_ic_favorite_24.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/drawable/ic_favorite_24.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_fragment_book.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_book.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_item_book_preview.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/item_book_preview.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/drawable_ic_search_24.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/drawable/ic_search_24.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_fragment_settings.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_activity_main.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/navigation_booksearch_nav_graph.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/navigation/booksearch_nav_graph.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_fragment_search.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_search.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_kakao_book_api.app-merged_res-59:/layout_fragment_favorite.xml.flat",
+        "source": "com.example.kotlin_modern_kakao_book_api.app-main-61:/layout/fragment_favorite.xml"
+    }
+]

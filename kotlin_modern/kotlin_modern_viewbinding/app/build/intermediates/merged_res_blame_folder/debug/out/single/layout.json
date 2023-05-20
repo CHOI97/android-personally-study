@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-mergeDebugResources-44:/layout/fragment_second.xml",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-mergeDebugResources-44:/layout/fragment_first.xml",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.example.kotlin_modern_viewbinding.app-mergeDebugResources-44:/layout/content_main.xml",
+        "source": "com.example.kotlin_modern_viewbinding.app-main-47:/layout/content_main.xml"
+    }
+]
