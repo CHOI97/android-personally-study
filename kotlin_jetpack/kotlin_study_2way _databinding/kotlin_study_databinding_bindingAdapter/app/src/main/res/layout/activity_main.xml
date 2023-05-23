@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.kotlin_study_databinding_bindingadapter.MainViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,21 +26,37 @@
            android:textSize="50sp"/>
        <TextView
            android:id="@+id/ageArea"
-           android:text="0"
+           myAge="@{viewModel.mutableAge}"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:textSize="50sp"
            android:gravity="center"
            android:layout_marginTop="50dp"/>
+<!--       <TextView-->
+<!--           android:id="@+id/ageArea"-->
+<!--           android:text="@{Integer.toString(viewModel.mutableAge)}"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:textSize="50sp"-->
+<!--           android:gravity="center"-->
+<!--           android:layout_marginTop="50dp"/>-->
        <ImageView
            android:id="@+id/imgArea"
            android:layout_width="300dp"
            android:layout_height="300dp"
            android:layout_gravity="center"
+           myImg="@{viewModel.mutableAge}"
            android:src="@drawable/ic_launcher_background"/>
+<!--       <ImageView-->
+<!--           android:id="@+id/imgArea"-->
+<!--           android:layout_width="300dp"-->
+<!--           android:layout_height="300dp"-->
+<!--           android:layout_gravity="center"-->
+<!--           android:src="@drawable/ic_launcher_background"/>-->
        <Button
            android:id="@+id/plus"
            android:layout_margin="20dp"
+           android:onClick="@{()->viewModel.plus()}"
            android:text="+"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"/>
