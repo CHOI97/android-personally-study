@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <TextView
+           android:layout_gravity="center"
+           android:text="나이"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="50dp"
+           android:textSize="50sp"/>
+       <TextView
+           android:id="@+id/ageArea"
+           android:text="0"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="50sp"
+           android:gravity="center"
+           android:layout_marginTop="50dp"/>
+       <ImageView
+           android:id="@+id/imgArea"
+           android:layout_width="300dp"
+           android:layout_height="300dp"
+           android:layout_gravity="center"
+           android:src="@drawable/ic_launcher_background"/>
+       <Button
+           android:id="@+id/plus"
+           android:layout_margin="20dp"
+           android:text="+"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
