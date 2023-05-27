@@ -7,7 +7,10 @@ import android.os.Looper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+// Room / Coroutine Flow
 // DiffUtil / ListAdapter
+// Diff = difference? , ListAdapter를 통해 구현
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -71,3 +74,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+// DB에서 값을 받아와서 새롭게 Recyclerview에 보여줄 일이 있는데
+// 이걸 매번 DB에 값이 바뀔 때 마다 Recyclerview를 새롭게 그려주는 작업이 불필요
+// 변경된 데이터만 바꿔줄 수 있게 효율적으로 하기위해
+// DiffUtil / ListAdapter를 사용한다
