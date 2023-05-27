@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CatListAdapter : ListAdapter<CatDataModel, CatListAdapter.CatViewHolder>(DiffCallback){
 
-    companion object {
+    companion object { 
         private val DiffCallback = object : DiffUtil.ItemCallback<CatDataModel>(){
             override fun areItemsTheSame(oldItem: CatDataModel, newItem: CatDataModel): Boolean {
                 // 고유값 비교
