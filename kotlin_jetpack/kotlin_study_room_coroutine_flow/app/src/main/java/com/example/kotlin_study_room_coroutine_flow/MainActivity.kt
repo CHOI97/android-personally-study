@@ -14,8 +14,7 @@ import kotlinx.coroutines.withContext
 
 // Room + Coroutine Flow
 // changes database observable read (Flow)
-// 1. Flow를 사용하지 않을 때 *
-
+// 1. Flow를 사용하지 않을 때
 // 2. Flow를 사용했을 때
 
 class MainActivity : AppCompatActivity() {
@@ -40,9 +39,17 @@ class MainActivity : AppCompatActivity() {
                 inputArea.setText("")
             }
         }
-        getAllBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                val resultText = db.textDao().getAllData().toString()
+//        getAllBtn.setOnClickListener {
+//            CoroutineScope(Dispatchers.IO).launch {
+//                val resultText = db.textDao().getAllData().toString()
+//                withContext(Dispatchers.Main){
+//                    resultArea.text = resultText
+//                }
+//            }
+//        }
+        CoroutineScope(Dispatchers.IO).launch{
+            db.textDao().getAllDataFlow().collect{
+                var resultText = it.toString()
                 withContext(Dispatchers.Main){
                     resultArea.text = resultText
                 }
