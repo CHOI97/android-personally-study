@@ -58,7 +58,7 @@ fun ImageCard(
 ) {
     Card(
         modifier = modifier,
-        shape = RoundedCornerSha pe(8.dp),
+        shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 5.dp
         )
