@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
             }
             val snackbarHostState = remember { SnackbarHostState() }
             val scope = rememberCoroutineScope()
-            val keyboaedController = LocalSoftwareKeyboardController.current
+            val keyboardController = LocalSoftwareKeyboardController.current
             Scaffold(
                 snackbarHost = {
                     SnackbarHost(snackbarHostState)
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                         onValueChange = setValue,
                     )
                     Button(onClick = {
-                        keyboaedController?.hide()
+                        keyboardController?.hide()
                         scope.launch{
                             snackbarHostState.showSnackbar("Hello $text")
                         }
