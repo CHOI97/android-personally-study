@@ -19,28 +19,43 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="30sp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="이름을 작성해주세요"
+                android:text="@={viewModel.mutableName}"
+                android:textSize="20sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="나이"
-                android:textSize="80sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/ageArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:hint="0"
                 android:text="@{Integer.toString(viewModel.mutableAge)}"
-                android:textSize="50sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/plusBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:text="plus"
                 android:onClick="@{()->viewModel.plus()}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:textSize="40dp"
+                android:text="@{viewModel.mutableName + `님의 나이는` + Integer.toString(viewModel.mutableAge)}"/>
 
 
         </LinearLayout>

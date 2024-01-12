@@ -6,9 +6,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-// SQLite
-// ROOM
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var db : SQLiteHelperSample
