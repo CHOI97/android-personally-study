@@ -12,11 +12,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
-/*
-* @InstallIn
-* 해당 어노테이션은 Hilt의 표준 컴포넌트들 중 어떤 컴포넌트에 모듈을 설치할지를 결정
-* 콤마(,)를 통해 여러 컴포넌트에 install 가능
-*/
+
 @Module
 @InstallIn(SingletonComponent::class)
 object MyModule {
