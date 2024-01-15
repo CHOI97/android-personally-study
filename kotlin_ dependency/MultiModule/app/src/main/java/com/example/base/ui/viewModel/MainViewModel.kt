@@ -37,7 +37,7 @@ class MainViewModel @Inject constructor(
         if(response.isSuccessful){
             response .body()?.let{body->
                 _title.postValue(body.title)
-                _image.postValue(body.images[0])
+                _image.postValue(body.thumbnail)
                 _description.postValue(body.description)
             }
         }else{

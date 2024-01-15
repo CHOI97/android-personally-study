@@ -6,13 +6,13 @@ import java.lang.System;
 public enum Sort {
     /*public static final*/ Accuracy /* = new Accuracy(null) */,
     /*public static final*/ LATEST /* = new LATEST(null) */;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private final java.lang.String value = null;
     
     Sort(java.lang.String value) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getValue() {
         return null;
     }

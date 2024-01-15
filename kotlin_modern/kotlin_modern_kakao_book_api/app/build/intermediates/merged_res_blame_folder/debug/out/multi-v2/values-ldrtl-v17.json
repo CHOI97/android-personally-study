@@ -4,7 +4,7 @@
             "outputFile": "com.example.kotlin_modern_kakao_book_api.app-mergeDebugResources-57:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/choi97/.gradle/caches/transforms-3/38474919b353f1d120f4c6c60712ba30/transformed/material-1.8.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/choi/.gradle/caches/transforms-3/38474919b353f1d120f4c6c60712ba30/transformed/material-1.8.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

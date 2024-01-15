@@ -9,16 +9,16 @@ public final class OrmConverter {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @androidx.room.TypeConverter()
-    public final java.lang.String fromList(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @androidx.room.TypeConverter
+    public final java.lang.String fromList(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.String> value) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @androidx.room.TypeConverter()
-    public final java.util.List<java.lang.String> toList(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @androidx.room.TypeConverter
+    public final java.util.List<java.lang.String> toList(@org.jetbrains.annotations.NotNull
     java.lang.String value) {
         return null;
     }

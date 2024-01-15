@@ -8,12 +8,12 @@ import com.example.kotlin_modern_kakao_book_api.databinding.ItemBookPreviewBindi
 public final class BookSearchViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
     private final com.example.kotlin_modern_kakao_book_api.databinding.ItemBookPreviewBinding binding = null;
     
-    public BookSearchViewHolder(@org.jetbrains.annotations.NotNull()
+    public BookSearchViewHolder(@org.jetbrains.annotations.NotNull
     com.example.kotlin_modern_kakao_book_api.databinding.ItemBookPreviewBinding binding) {
         super(null);
     }
     
-    public final void bind(@org.jetbrains.annotations.NotNull()
+    public final void bind(@org.jetbrains.annotations.NotNull
     com.example.kotlin_modern_kakao_book_api.data.model.Book book) {
     }
 }

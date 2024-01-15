@@ -21,7 +21,7 @@ public final class Calculator {
         return 0;
     }
     
-    @org.jetbrains.annotations.Nullable()
+    @org.jetbrains.annotations.Nullable
     public final java.lang.Integer division(int x, int y) {
         return null;
     }

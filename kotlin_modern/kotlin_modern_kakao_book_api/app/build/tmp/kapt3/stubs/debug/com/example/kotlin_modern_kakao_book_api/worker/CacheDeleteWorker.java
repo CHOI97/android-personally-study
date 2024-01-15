@@ -11,18 +11,18 @@ import dagger.assisted.AssistedInject;
 public final class CacheDeleteWorker extends androidx.work.Worker {
     private final java.lang.String cacheDeleteResult = null;
     
-    @dagger.assisted.AssistedInject()
-    public CacheDeleteWorker(@org.jetbrains.annotations.NotNull()
-    @dagger.assisted.Assisted()
-    android.content.Context context, @org.jetbrains.annotations.NotNull()
-    @dagger.assisted.Assisted()
-    androidx.work.WorkerParameters workerParams, @org.jetbrains.annotations.NotNull()
+    @dagger.assisted.AssistedInject
+    public CacheDeleteWorker(@org.jetbrains.annotations.NotNull
+    @dagger.assisted.Assisted
+    android.content.Context context, @org.jetbrains.annotations.NotNull
+    @dagger.assisted.Assisted
+    androidx.work.WorkerParameters workerParams, @org.jetbrains.annotations.NotNull
     java.lang.String cacheDeleteResult) {
         super(null, null);
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
     public androidx.work.ListenableWorker.Result doWork() {
         return null;
     }

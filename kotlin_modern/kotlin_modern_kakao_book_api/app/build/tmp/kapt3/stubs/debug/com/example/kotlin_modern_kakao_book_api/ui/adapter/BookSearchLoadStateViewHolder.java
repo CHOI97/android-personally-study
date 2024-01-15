@@ -8,13 +8,13 @@ import com.example.kotlin_modern_kakao_book_api.databinding.ItemLoadStateBinding
 public final class BookSearchLoadStateViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
     private final com.example.kotlin_modern_kakao_book_api.databinding.ItemLoadStateBinding binding = null;
     
-    public BookSearchLoadStateViewHolder(@org.jetbrains.annotations.NotNull()
-    com.example.kotlin_modern_kakao_book_api.databinding.ItemLoadStateBinding binding, @org.jetbrains.annotations.NotNull()
+    public BookSearchLoadStateViewHolder(@org.jetbrains.annotations.NotNull
+    com.example.kotlin_modern_kakao_book_api.databinding.ItemLoadStateBinding binding, @org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function0<kotlin.Unit> retry) {
         super(null);
     }
     
-    public final void bind(@org.jetbrains.annotations.NotNull()
+    public final void bind(@org.jetbrains.annotations.NotNull
     androidx.paging.LoadState loadState) {
     }
 }

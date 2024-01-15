@@ -1,5 +1,6 @@
 package com.example.base.repository
 
+import com.example.base.model.ProductListResponse
 import com.example.base.model.ProductResponse
 import com.example.base.network.Api
 import retrofit2.Response
@@ -14,7 +15,7 @@ class ProductRepositoryImpl @Inject constructor(
         return api.getPost(number)
     }
 
-    override suspend fun getPostAll(): Response<List<ProductResponse>> {
+    override suspend fun getPostAll(): Response<ProductListResponse> {
         return api.getPostAll()
     }
 

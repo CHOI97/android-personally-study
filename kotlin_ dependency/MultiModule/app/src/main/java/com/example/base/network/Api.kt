@@ -1,5 +1,6 @@
 package com.example.base.network
 
+import com.example.base.model.ProductListResponse
 import com.example.base.model.ProductResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -13,5 +14,5 @@ interface Api {
     ): Response<ProductResponse>
 
     @GET("products/")
-    suspend fun getPostAll(): Response<List<ProductResponse>>
+    suspend fun getPostAll(): Response<ProductListResponse>
 }

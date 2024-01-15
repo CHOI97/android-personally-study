@@ -10,21 +10,21 @@ import com.example.kotlin_modern_kakao_book_api.databinding.ItemLoadStateBinding
 public final class BookSearchLoadStateAdapter extends androidx.paging.LoadStateAdapter<com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchLoadStateViewHolder> {
     private final kotlin.jvm.functions.Function0<kotlin.Unit> retry = null;
     
-    public BookSearchLoadStateAdapter(@org.jetbrains.annotations.NotNull()
+    public BookSearchLoadStateAdapter(@org.jetbrains.annotations.NotNull
     kotlin.jvm.functions.Function0<kotlin.Unit> retry) {
         super();
     }
     
-    @java.lang.Override()
-    public void onBindViewHolder(@org.jetbrains.annotations.NotNull()
-    com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchLoadStateViewHolder holder, @org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onBindViewHolder(@org.jetbrains.annotations.NotNull
+    com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchLoadStateViewHolder holder, @org.jetbrains.annotations.NotNull
     androidx.paging.LoadState loadState) {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchLoadStateViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull()
-    android.view.ViewGroup parent, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public com.example.kotlin_modern_kakao_book_api.ui.adapter.BookSearchLoadStateViewHolder onCreateViewHolder(@org.jetbrains.annotations.NotNull
+    android.view.ViewGroup parent, @org.jetbrains.annotations.NotNull
     androidx.paging.LoadState loadState) {
         return null;
     }

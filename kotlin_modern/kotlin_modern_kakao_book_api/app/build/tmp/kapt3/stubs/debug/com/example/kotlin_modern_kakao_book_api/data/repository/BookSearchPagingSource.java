@@ -12,28 +12,28 @@ public final class BookSearchPagingSource extends androidx.paging.PagingSource<j
     private final com.example.kotlin_modern_kakao_book_api.data.api.BookSearchApi api = null;
     private final java.lang.String query = null;
     private final java.lang.String sort = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.example.kotlin_modern_kakao_book_api.data.repository.BookSearchPagingSource.Companion Companion = null;
     public static final int STARTING_PAGE_INDEX = 1;
     
-    public BookSearchPagingSource(@org.jetbrains.annotations.NotNull()
-    com.example.kotlin_modern_kakao_book_api.data.api.BookSearchApi api, @org.jetbrains.annotations.NotNull()
-    java.lang.String query, @org.jetbrains.annotations.NotNull()
+    public BookSearchPagingSource(@org.jetbrains.annotations.NotNull
+    com.example.kotlin_modern_kakao_book_api.data.api.BookSearchApi api, @org.jetbrains.annotations.NotNull
+    java.lang.String query, @org.jetbrains.annotations.NotNull
     java.lang.String sort) {
         super();
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public java.lang.Object load(@org.jetbrains.annotations.NotNull()
-    androidx.paging.PagingSource.LoadParams<java.lang.Integer> params, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public java.lang.Object load(@org.jetbrains.annotations.NotNull
+    androidx.paging.PagingSource.LoadParams<java.lang.Integer> params, @org.jetbrains.annotations.NotNull
     kotlin.coroutines.Continuation<? super androidx.paging.PagingSource.LoadResult<java.lang.Integer, com.example.kotlin_modern_kakao_book_api.data.model.Book>> continuation) {
         return null;
     }
     
-    @org.jetbrains.annotations.Nullable()
-    @java.lang.Override()
-    public java.lang.Integer getRefreshKey(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.Nullable
+    @java.lang.Override
+    public java.lang.Integer getRefreshKey(@org.jetbrains.annotations.NotNull
     androidx.paging.PagingState<java.lang.Integer, com.example.kotlin_modern_kakao_book_api.data.model.Book> state) {
         return null;
     }

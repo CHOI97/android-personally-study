@@ -11,14 +11,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".ui.view.ProductListActivity">
 
         <TextView
             android:id="@+id/tv_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
+            android:textSize="@dimen/top_text_size"
             android:text="Product List"
             android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
