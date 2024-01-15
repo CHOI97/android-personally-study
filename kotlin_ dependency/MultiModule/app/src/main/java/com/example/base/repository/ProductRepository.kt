@@ -6,4 +6,5 @@ import javax.inject.Inject
 
 interface ProductRepository {
     suspend fun getPost(number: Int) : Response<ProductResponse>
+    suspend fun getPostAll(): Response<List<ProductResponse>>
 }

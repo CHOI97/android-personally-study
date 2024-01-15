@@ -14,4 +14,8 @@ class ProductRepositoryImpl @Inject constructor(
         return api.getPost(number)
     }
 
+    override suspend fun getPostAll(): Response<List<ProductResponse>> {
+        return api.getPostAll()
+    }
+
 }

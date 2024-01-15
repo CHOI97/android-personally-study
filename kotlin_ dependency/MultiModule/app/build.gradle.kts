@@ -45,6 +45,10 @@ dependencies {
     implementation ("androidx.activity:activity-ktx:1.1.0")
     implementation ("androidx.fragment:fragment-ktx:1.2.5")
 
+    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt ("androidx.hilt:hilt-compiler:1.0.0-alpha03")
+
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")

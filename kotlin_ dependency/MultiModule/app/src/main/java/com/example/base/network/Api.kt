@@ -11,4 +11,7 @@ interface Api {
     suspend fun getPost(
         @Path("number") number : Int
     ): Response<ProductResponse>
+
+    @GET("products/")
+    suspend fun getPostAll(): Response<List<ProductResponse>>
 }
