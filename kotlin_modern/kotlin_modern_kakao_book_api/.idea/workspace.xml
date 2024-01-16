@@ -10,24 +10,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6bda707-6abc-4bdd-bdd6-f836513c280c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/application/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/application/MyApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/Product.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/ProductResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/ProductResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/network/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/network/Api.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/adapter/ProductListRecyclerviewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/adapter/ProductListRecyclerviewAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/ProductListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/ProductListActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/ProductListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/ProductListViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_product_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_product_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/item_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/item_product.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/androidTest/java/com/example/base/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/application/MyApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/di/MyModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/di/RepositoryModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/Product.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/ProductListResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/model/ProductResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/network/Api.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/repository/ProductRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/adapter/ProductListRecyclerviewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/view/ProductListActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/ui/viewModel/ProductListViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/util/Constants.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/java/com/example/base/util/bindingAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/drawable/baseline_keyboard_arrow_right_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/activity_product_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/layout/item_product.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/app/src/test/java/com/example/base/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin_ dependency/MultiModule/settings.gradle.kts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/kotlin_modern_kakao_book_api/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/kotlin_modern_kakao_book_api/BuildConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,15 +146,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/choi/user/Kotlin/Github/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/choi/user/Kotlin/Github/kotlin-personally-study/kotlin_modern/kotlin_modern_kakao_book_api",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
