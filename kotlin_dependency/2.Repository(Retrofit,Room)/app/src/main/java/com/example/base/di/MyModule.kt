@@ -2,6 +2,7 @@ package com.example.base.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.base.db.FavoriteDao
 import com.example.base.db.FavoriteDatabase
 import com.example.base.network.Api
 import com.example.base.util.Constants
@@ -59,4 +60,8 @@ object MyModule {
             FavoriteDatabase::class.java,
             "$DATABASE_NAME"
         ).build()
+
+
+    @Provides
+    fun provideUserDao(database: FavoriteDatabase): FavoriteDao = database.favoriteDao()
 }

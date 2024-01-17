@@ -1,5 +1,7 @@
 package com.example.base.di
 
+import com.example.base.repository.db.FavoriteRepository
+import com.example.base.repository.db.FavoriteRepositoryImpl
 import com.example.base.repository.network.ProductRepository
 import com.example.base.repository.network.ProductRepositoryImpl
 import dagger.Binds
@@ -17,4 +19,9 @@ abstract class RepositoryModule {
         productRepositoryImpl: ProductRepositoryImpl
     ): ProductRepository
 
+    @Singleton
+    @Binds
+    abstract fun bindFavoriteRepository(
+        favoriteRepositoryImpl: FavoriteRepositoryImpl
+    ): FavoriteRepository
 }

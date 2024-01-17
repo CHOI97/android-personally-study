@@ -8,8 +8,6 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.base.R
 import com.example.base.databinding.ActivityMainBinding
-import com.example.base.model.Product
-import com.example.base.ui.adapter.ProductListRecyclerviewAdapter
 import com.example.base.ui.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

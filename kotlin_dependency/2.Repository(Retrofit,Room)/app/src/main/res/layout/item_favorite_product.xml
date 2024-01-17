@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="productModel"
-            type="com.example.base.model.Product" />
+            name="favoriteModel"
+            type="com.example.base.db.Favorite" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@color/gray"
-            imageFromUrl="@{productModel.thumbnail}"
+            imageFromUrl="@{favoriteModel.thumbnail}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
             android:id="@+id/tv_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{productModel.name}"
+            android:text="@{favoriteModel.name}"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/tv_product_description"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
             android:id="@+id/tv_product_description"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@{productModel.description}"
+            android:text="@{favoriteModel.description}"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

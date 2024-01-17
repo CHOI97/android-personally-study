@@ -1,5 +1,6 @@
 package com.example.base.db
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -8,6 +9,7 @@ import com.example.base.model.Product
 import com.example.base.util.Constants.FAVORITE_PRODUCT_TABLE_NAME
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface FavoriteDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -18,7 +20,5 @@ interface FavoriteDao {
 
     @Delete
     suspend fun deleteFavorite(favorite: Favorite)
-
-
 
 }
