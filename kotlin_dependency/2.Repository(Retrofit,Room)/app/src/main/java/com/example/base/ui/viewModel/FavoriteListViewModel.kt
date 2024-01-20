@@ -26,6 +26,8 @@ class FavoriteListViewModel @Inject constructor(
 
     fun deleteFavorite(favorite: Favorite) = viewModelScope.launch(Dispatchers.IO) {
         favoriteRepository.deleteFavorite(favorite)
+        val updatedList = favoriteRepository.getFavoriteList()
+        _favoriteList.postValue(updatedList)
     }
 
 }

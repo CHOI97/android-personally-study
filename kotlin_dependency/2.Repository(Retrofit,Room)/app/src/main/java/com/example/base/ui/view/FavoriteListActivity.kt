@@ -2,7 +2,9 @@ package com.example.base.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,31 +25,35 @@ class FavoriteListActivity : AppCompatActivity() {
     private val viewModel by viewModels<FavoriteListViewModel>()
 
 
-    private lateinit var  favoriteListAdapter : FavoriteListRVAdapter
+    private val favoriteListAdapter by lazy { FavoriteListRVAdapter() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_favorite_list)
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
+        setupRecyclerView()
         viewModel.getFavoriteList()
+        observeFavoriteList()
+    }
+    private fun setupRecyclerView() {
+        favoriteListAdapter.onDeleteClick = { favorite ->
+            viewModel.deleteFavorite(favorite)
+            Timber.d("onDeleteClick")
+            Toast.makeText(this,"해당 항목이 삭제되었습니다",Toast.LENGTH_SHORT).show()
+        }
+        binding.rvFavorite.apply {
+            layoutManager = LinearLayoutManager(this@FavoriteListActivity)
+            adapter = favoriteListAdapter
+        }
 
-        viewModel.favoriteList.observe(this){
-            Timber.d("observer it size ${it.size}")
-            favoriteListAdapter = FavoriteListRVAdapter(it)
-            binding.rvFavorite.layoutManager = LinearLayoutManager(this)
-            binding.rvFavorite.adapter = favoriteListAdapter
-            favoriteListAdapter.setOnItemClickListener(object: FavoriteListRVAdapter.OnClickInterface{
-                override fun onItemClick(v: View, product: Product, pos: Int) {
-                }
 
-                override fun onDeleteButtonClick(favorite: Favorite, pos: Int) {
-                    viewModel.deleteFavorite(favorite)
-                }
-
-            })
+    }
+    private fun observeFavoriteList() {
+        viewModel.favoriteList.observe(this) { favorites ->
+            Timber.d("observer it size ${favorites.size}")
+            favoriteListAdapter.submitList(favorites)
         }
     }
-
-
 }
