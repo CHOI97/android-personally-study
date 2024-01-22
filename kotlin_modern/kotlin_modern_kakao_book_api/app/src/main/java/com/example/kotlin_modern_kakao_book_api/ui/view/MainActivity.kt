@@ -1,7 +1,9 @@
 package com.example.kotlin_modern_kakao_book_api.ui.view
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -10,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.kotlin_modern_kakao_book_api.R
 import com.example.kotlin_modern_kakao_book_api.databinding.ActivityMainBinding
+import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookViewModel
 //import com.example.kotlin_modern_kakao_book_api.ui.viewmodel.BookSearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     //    lateinit var bookSearchViewModel: BookSearchViewModel
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private val bookViewModel by viewModels<BookViewModel>()
 
 //    private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
 //    private val workManager = WorkManager.getInstance(application)
