@@ -4,6 +4,7 @@ plugins {
     id(Plugins.ANDROID_LIBRARY) version Versions.AGP apply false
     id(Plugins.KOTLIN_ANDROID) version Versions.KOTLIN apply false
     id(Plugins.DAGGER_HILT) version Versions.HILT apply false
+
 }
 
 tasks.register<Delete>("clean"){

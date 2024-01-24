@@ -5,7 +5,7 @@
     <data>
         <variable
             name="favoriteModel"
-            type="com.example.base.db.Favorite" />
+            type="com.example.data.db.Favorite" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

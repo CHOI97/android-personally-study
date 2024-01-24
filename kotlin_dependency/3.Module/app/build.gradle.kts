@@ -42,10 +42,6 @@ android {
 
 dependencies {
 
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":presentation"))
-
     // LifeCycle
     implementation(Dependencies.LIFECYCLE_VIEWMODEL_KTX)
     implementation(Dependencies.LIFECYCLE_SAVEDSTATE)

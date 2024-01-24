@@ -1,6 +1,9 @@
+
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.ANDROID_APPLICATION)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KAPT)
+    id(Plugins.DAGGER_HILT)
 }
 
 android {
@@ -11,7 +14,6 @@ android {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -34,10 +36,27 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.APP_COMPAT)
+    implementation(Dependencies.MATERIAL)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    testImplementation(Testing.JUNIT4)
+    androidTestImplementation(Testing.ANDROID_JUNIT)
+    androidTestImplementation(Testing.ESPRESSO_CORE)
+
+    // LifeCycle
+    implementation(Dependencies.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Dependencies.LIFECYCLE_SAVEDSTATE)
+    implementation(Dependencies.LIFECYCLE_RUNTIME_KTX)
+
+    // ViewModel delegate
+    implementation(Dependencies.ACTIVITY_KTX)
+    implementation(Dependencies.FRAGMENT_KTX)
+
+    // Timber
+    implementation (Dependencies.TIMBER)
+
+    // Hilt
+    implementation(Dependencies.DAGGER_HILT)
+    kapt(Dependencies.DAGGER_HILT_KAPT)
 }

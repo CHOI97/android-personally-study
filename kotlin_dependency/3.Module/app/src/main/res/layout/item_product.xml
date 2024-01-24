@@ -4,7 +4,7 @@
     <data>
         <variable
             name="productModel"
-            type="com.example.base.model.Product" />
+            type="com.example.data.model.Product" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

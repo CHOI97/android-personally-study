@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="com.example.base.ui.viewModel.MainViewModel" />
+            type="com.example.presentation.ui.viewModel.MainViewModel" />
     </data>
 
 
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        tools:context="com.example.base.ui.view.MainActivity"
+        tools:context="com.example.base.com.example.presentation.ui.view.MainActivity"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp">
 

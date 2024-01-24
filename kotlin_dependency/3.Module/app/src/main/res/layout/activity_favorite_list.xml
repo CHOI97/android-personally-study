@@ -6,13 +6,13 @@
     <data>
         <variable
             name="vm"
-            type="com.example.base.ui.viewModel.FavoriteListViewModel" />
+            type="com.example.presentation.ui.viewModel.FavoriteListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.view.ProductListActivity">
+        tools:context="com.example.presentation.ui.view.ProductListActivity">
 
         <TextView
             android:id="@+id/tv_favorite"

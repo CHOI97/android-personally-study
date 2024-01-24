@@ -1,17 +1,22 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.ANDROID_APPLICATION)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KAPT)
+    id(Plugins.DAGGER_HILT)
 }
 
 android {
-    namespace = "com.example.domain"
-    compileSdk = 33
+    namespace = "com.example.base"
+    compileSdk = DefaultConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
-        minSdk = 24
+        applicationId = "com.example.base"
+        minSdk = DefaultConfig.MIN_SDK_VERSION
+        targetSdk = DefaultConfig.TARGET_SDK_VERSION
+        versionCode = DefaultConfig.VERSION_CODE
+        versionName = DefaultConfig.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -30,14 +35,57 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        dataBinding = true
+    }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // LifeCycle
+    implementation(Dependencies.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Dependencies.LIFECYCLE_SAVEDSTATE)
+    implementation(Dependencies.LIFECYCLE_RUNTIME_KTX)
+
+    // ViewModel delegate
+    implementation(Dependencies.ACTIVITY_KTX)
+    implementation(Dependencies.FRAGMENT_KTX)
+
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.APP_COMPAT)
+    implementation(Dependencies.MATERIAL)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    testImplementation(Testing.JUNIT4)
+    androidTestImplementation(Testing.ANDROID_JUNIT)
+    androidTestImplementation(Testing.ESPRESSO_CORE)
+
+    // Retrofit
+    implementation (Dependencies.RETROFIT)
+    implementation (Dependencies.RETROFIT_CONVERTER_GSON)
+
+    // Room
+    implementation(Dependencies.ROOM_RUNTIME)
+    implementation(Dependencies.ROOM_KTX)
+    annotationProcessor(Dependencies.ROOM_KAPT)
+    kapt(Dependencies.ROOM_KAPT)
+
+
+
+    // Coroutine
+    implementation(Dependencies.COROUTINE_CORE)
+    implementation(Dependencies.COROUTINE_ANDROID)
+
+    // Glide
+    implementation (Dependencies.GLIDE)
+
+    // Okhttp
+    implementation (Dependencies.OKHTTP)
+    implementation (Dependencies.OKHTTP_LOGGING_INTERCEPTOR)
+
+    // Hilt
+    implementation(Dependencies.DAGGER_HILT)
+    kapt(Dependencies.DAGGER_HILT_KAPT)
+
+    // Timber
+    implementation (Dependencies.TIMBER)
 }
